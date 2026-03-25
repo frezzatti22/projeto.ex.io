@@ -1,33 +1,3 @@
-Entendido! Analisei a imagem e extraí a paleta de cores institucional da UNESPAR. É uma combinação muito sóbria e profissional, perfeita para um curso de engenharia.
-
-A paleta de image_3.png é composta por:
-
-Azul Profundo: (Aprox. #2C50A4) Uma cor sóbria e corporativa, excelente para títulos principais, cabeçalhos e elementos de estrutura. Transmite confiança e seriedade.
-
-Verde Sutil: (Aprox. #59B76A com gradiente) Uma cor vibrante e fresca, ótima para o fundo do corpo do site, criando uma base agradável de ler.
-
-Verde Claro (Destaque): (Aprox. #8CC640) Uma cor vibrante e viva, ideal para realçar palavras-chave, botões ou pontos específicos, como os pesos do SISU e as atividades práticas.
-
-Azul Médio (Destaque): (Aprox. #3B65CA) Uma cor que contrasta bem, boa para caixas de informações especiais ou links.
-
-Branco/Off-white: Para a maior parte do texto contra o fundo verde ou azul principal.
-
-Com base nisso, projetei o seguinte CSS para o seu código HTML. Para que ele funcione perfeitamente, vincule-o ao seu HTML com a tag <link rel="stylesheet" href="style.css"> no <head>.
-
-Arquivo CSS Completo e Comentado (style.css)
-CSS
-/*
-  ========================================
-  Paleta de Cores baseada na imagem da UNESPAR (image_3.png):
-  
-  --cor-principal-azul: #2C50A4  (Títulos, cabeçalho)
-  --cor-principal-verde: #59B76A (Fundo principal)
-  --cor-destaque-verde-claro: #8CC640 (Realces, checkmarks, h3)
-  --cor-destaque-azul-medio: #3B65CA (Caixas especiais - opcional)
-  --cor-texto-principal: #FFFFFF   (Texto do corpo contra fundo verde)
-  
-  ========================================
-*/
 
 :root {
   --cor-principal-azul: #2C50A4;
@@ -173,29 +143,3 @@ p strong {
   color: var(--cor-destaque-verde-claro);
   margin-top: 0;
 }
-Como aplicar as classes especiais (SISU)
-Para dar aquele toque final de design que você viu na imagem e destacar os pesos e notas, você precisa fazer um pequeno ajuste no seu código HTML. Encontre o trecho do SISU e adicione as tags <div> com os IDs correspondentes, conforme mostrado abaixo:
-
-HTML
-<h2>COMO INGRESSAR?</h2>
-<ul>
-<li>Vestibular da UNESPAR (prova própria)</li>
-<li>SISU – utilizando a nota do ENEM</li>
-</ul>
-
-<div id="pesos-sisu">
-  <h3>Pesos das provas no SISU:</h3>
-  <ul>
-      <li>Redação: 3 | Linguagens: 3 | Matemática: 2</li>
-      <li>Ciências Humanas: 1 | Ciências da Natureza: 1</li>
-  </ul>
-</div>
-
-<div id="notas-corte">
-  <h3>Notas de corte aproximadas:</h3>
-  <ul>
-      <li>Ampla concorrência: 641,78</li>
-      <li>Escola pública: 610,98</li>
-      <li>Cotas (PPI): 544,43</li>
-  </ul>
-</div>
