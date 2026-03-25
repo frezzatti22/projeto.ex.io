@@ -1,1 +1,201 @@
+Entendido! Analisei a imagem e extraí a paleta de cores institucional da UNESPAR. É uma combinação muito sóbria e profissional, perfeita para um curso de engenharia.
 
+A paleta de image_3.png é composta por:
+
+Azul Profundo: (Aprox. #2C50A4) Uma cor sóbria e corporativa, excelente para títulos principais, cabeçalhos e elementos de estrutura. Transmite confiança e seriedade.
+
+Verde Sutil: (Aprox. #59B76A com gradiente) Uma cor vibrante e fresca, ótima para o fundo do corpo do site, criando uma base agradável de ler.
+
+Verde Claro (Destaque): (Aprox. #8CC640) Uma cor vibrante e viva, ideal para realçar palavras-chave, botões ou pontos específicos, como os pesos do SISU e as atividades práticas.
+
+Azul Médio (Destaque): (Aprox. #3B65CA) Uma cor que contrasta bem, boa para caixas de informações especiais ou links.
+
+Branco/Off-white: Para a maior parte do texto contra o fundo verde ou azul principal.
+
+Com base nisso, projetei o seguinte CSS para o seu código HTML. Para que ele funcione perfeitamente, vincule-o ao seu HTML com a tag <link rel="stylesheet" href="style.css"> no <head>.
+
+Arquivo CSS Completo e Comentado (style.css)
+CSS
+/*
+  ========================================
+  Paleta de Cores baseada na imagem da UNESPAR (image_3.png):
+  
+  --cor-principal-azul: #2C50A4  (Títulos, cabeçalho)
+  --cor-principal-verde: #59B76A (Fundo principal)
+  --cor-destaque-verde-claro: #8CC640 (Realces, checkmarks, h3)
+  --cor-destaque-azul-medio: #3B65CA (Caixas especiais - opcional)
+  --cor-texto-principal: #FFFFFF   (Texto do corpo contra fundo verde)
+  
+  ========================================
+*/
+
+:root {
+  --cor-principal-azul: #2C50A4;
+  --cor-principal-verde: #59B76A;
+  --cor-destaque-verde-claro: #8CC640;
+  --cor-destaque-azul-medio: #3B65CA;
+  --cor-texto-principal: #FFFFFF;
+  
+  /* Fonte limpa e moderna para sans-serif */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos Globais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background: linear-gradient(135deg, var(--cor-principal-verde), #4CAF50);
+  color: var(--cor-texto-principal);
+  line-height: 1.6;
+  font-size: 1.05rem;
+  padding-bottom: 50px;
+}
+
+/* Cabeçalho */
+header {
+  background-color: var(--cor-principal-azul);
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+header h1 img {
+  max-width: 250px;
+  height: auto;
+}
+
+/* Main - Layout Central */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Títulos */
+h2 {
+  color: var(--cor-principal-azul);
+  border-bottom: 3px solid var(--cor-destaque-verde-claro);
+  padding-bottom: 15px;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+h3 {
+  color: var(--cor-destaque-verde-claro);
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Parágrafos e Citações */
+p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+blockquote {
+  border-left: 6px solid var(--cor-principal-azul);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin: 30px 0;
+  font-style: italic;
+  font-size: 1.2rem;
+  border-radius: 0 8px 8px 0;
+  text-align: center;
+}
+
+/* Listas */
+ul {
+  margin-left: 15px;
+  margin-bottom: 25px;
+  list-style-type: none; /* Remover os bullet points padrões */
+}
+
+ul li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 30px;
+}
+
+/* Bullet Points Customizados (como um checkmark) */
+ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--cor-destaque-verde-claro);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Texto Negrito */
+ul li strong,
+p strong {
+  color: var(--cor-destaque-verde-claro);
+  font-weight: 700;
+}
+
+/* === Classes especiais para o SISU === */
+
+/* Adicionar um ID ao bloco de Pesos no HTML: <div id="pesos-sisu"> ... </div> */
+#pesos-sisu {
+  background-color: var(--cor-destaque-azul-medio);
+  padding: 15px;
+  border-radius: 6px;
+  color: var(--cor-texto-principal);
+  margin-bottom: 20px;
+}
+
+#pesos-sisu h3 {
+  color: var(--cor-texto-principal);
+  border-bottom: 2px solid var(--cor-texto-principal);
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+/* Adicionar um ID ao bloco de Notas no HTML: <div id="notas-corte"> ... </div> */
+#notas-corte {
+  border: 2px solid var(--cor-destaque-verde-claro);
+  padding: 15px;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+#notas-corte h3 {
+  color: var(--cor-destaque-verde-claro);
+  margin-top: 0;
+}
+Como aplicar as classes especiais (SISU)
+Para dar aquele toque final de design que você viu na imagem e destacar os pesos e notas, você precisa fazer um pequeno ajuste no seu código HTML. Encontre o trecho do SISU e adicione as tags <div> com os IDs correspondentes, conforme mostrado abaixo:
+
+HTML
+<h2>COMO INGRESSAR?</h2>
+<ul>
+<li>Vestibular da UNESPAR (prova própria)</li>
+<li>SISU – utilizando a nota do ENEM</li>
+</ul>
+
+<div id="pesos-sisu">
+  <h3>Pesos das provas no SISU:</h3>
+  <ul>
+      <li>Redação: 3 | Linguagens: 3 | Matemática: 2</li>
+      <li>Ciências Humanas: 1 | Ciências da Natureza: 1</li>
+  </ul>
+</div>
+
+<div id="notas-corte">
+  <h3>Notas de corte aproximadas:</h3>
+  <ul>
+      <li>Ampla concorrência: 641,78</li>
+      <li>Escola pública: 610,98</li>
+      <li>Cotas (PPI): 544,43</li>
+  </ul>
+</div>
