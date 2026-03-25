@@ -1,13 +1,11 @@
-/* PALETA UNESPAR: 
-   Azul: #2C50A4 | Verde: #59B76A | Verde Lima: #8CC640 
-*/
-
+/* PALETA DE CORES INSTITUCIONAL */
 :root {
     --azul-unespar: #2C50A4;
     --verde-fundo: #59B76A;
     --verde-destaque: #8CC640;
     --branco: #ffffff;
-    --sombra: rgba(0, 0, 0, 0.15);
+    --cinza-claro: #f4f7f6;
+    --texto: #333333;
 }
 
 * {
@@ -17,147 +15,176 @@
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f4f7f6; /* Fundo leve para não cansar a vista */
-    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cinza-claro);
+    color: var(--texto);
     line-height: 1.6;
 }
 
-/* Cabeçalho com o Azul Institucional */
+/* Header */
 header {
     background-color: var(--azul-unespar);
-    padding: 40px 20px;
+    padding: 30px 20px;
     text-align: center;
-    box-shadow: 0 4px 10px var(--sombra);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 header h1 img {
-    max-width: 280px;
+    max-width: 260px;
     height: auto;
-    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.2));
 }
 
-/* Container Principal */
+/* Conteúdo Principal */
 main {
-    max-width: 850px;
+    max-width: 900px;
     margin: 30px auto;
     background: var(--branco);
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* Títulos Estilizados */
+section {
+    margin-bottom: 40px;
+}
+
+/* Títulos */
 h2 {
     color: var(--azul-unespar);
-    font-size: 1.8rem;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    border-left: 5px solid var(--verde-fundo);
+    border-left: 6px solid var(--verde-fundo);
     padding-left: 15px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 h3 {
     color: var(--verde-fundo);
-    margin: 20px 0 10px 0;
+    margin: 15px 0;
 }
 
-/* Citação em Destaque */
+/* Citação */
 blockquote {
-    background: #eef5ee;
-    border-right: 5px solid var(--verde-destaque);
-    border-left: 5px solid var(--verde-destaque);
+    background: #f0f7f0;
+    border-radius: 8px;
     padding: 25px;
-    margin: 30px 0;
     font-style: italic;
     font-size: 1.2rem;
     text-align: center;
-    color: #444;
-    border-radius: 8px;
+    border-right: 4px solid var(--verde-destaque);
+    margin: 20px 0;
 }
 
-/* Estilo das Listas */
+/* Listas Gerais */
 ul {
     list-style: none;
-    margin-bottom: 20px;
 }
 
 ul li {
-    padding: 10px 0 10px 35px;
+    padding: 8px 0 8px 30px;
     position: relative;
-    border-bottom: 1px solid #eee;
 }
 
-ul li:last-child {
-    border-bottom: none;
-}
-
-/* Ícone de check customizado nos itens da lista */
 ul li::before {
-    content: "➔";
+    content: "✓";
     position: absolute;
     left: 0;
     color: var(--verde-destaque);
     font-weight: bold;
 }
 
-/* --- DESTAQUES DO SISU (CONFORME A IMAGEM ENVIADA) --- */
-
-#pesos-sisu {
-    background-color: var(--azul-unespar);
-    color: var(--branco);
-    padding: 25px;
-    border-radius: 10px;
-    margin: 25px 0;
+/* Grid de Tecnologia */
+.tecnologia-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-#pesos-sisu h3 {
+.tech-item {
+    background-color: var(--azul-unespar);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-bottom: 4px solid var(--verde-destaque);
+    transition: 0.3s;
+}
+
+.tech-item:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+.tech-item strong {
+    display: block;
     color: var(--verde-destaque);
+    margin-bottom: 5px;
+}
+
+/* Grid de Mercado de Trabalho (Cards) */
+.grid-atuacao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 4px solid var(--azul-unespar);
+}
+
+.card h3 {
     margin-top: 0;
-    text-transform: uppercase;
     font-size: 1.1rem;
 }
 
-#pesos-sisu ul li {
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+/* Destaque Local */
+.destaque-local {
+    background: rgba(140, 198, 64, 0.1);
+    padding: 15px;
+    border-left: 5px solid var(--verde-destaque);
+    border-radius: 4px;
+    margin-top: 15px;
 }
 
-#pesos-sisu ul li::before {
-    color: var(--branco);
+/* Caixas SISU */
+#pesos-sisu {
+    background: var(--azul-unespar);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
+
+#pesos-sisu h3 { color: var(--verde-destaque); }
 
 #notas-corte {
-    background-color: var(--verde-fundo);
-    color: var(--branco);
-    padding: 25px;
-    border-radius: 10px;
-    border-left: 8px solid var(--azul-unespar);
+    background: var(--verde-fundo);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-#notas-corte h3 {
-    color: var(--branco);
-    margin-top: 0;
-    font-weight: bold;
+#notas-corte h3 { color: white; border-bottom: 1px solid white; padding-bottom: 5px; }
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #666;
 }
 
-#notas-corte ul li::before {
-    color: var(--azul-unespar);
-}
-
-/* Responsividade para Celular */
+/* Responsividade */
 @media (max-width: 600px) {
+    .grid-atuacao, .tecnologia-container {
+        grid-template-columns: 1fr;
+    }
     main {
-        margin: 10px;
         padding: 20px;
-    }
-    
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    header h1 img {
-        max-width: 200px;
+        margin: 10px;
     }
 }
