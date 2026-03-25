@@ -1,145 +1,163 @@
+/* PALETA UNESPAR: 
+   Azul: #2C50A4 | Verde: #59B76A | Verde Lima: #8CC640 
+*/
 
 :root {
-  --cor-principal-azul: #2C50A4;
-  --cor-principal-verde: #59B76A;
-  --cor-destaque-verde-claro: #8CC640;
-  --cor-destaque-azul-medio: #3B65CA;
-  --cor-texto-principal: #FFFFFF;
-  
-  /* Fonte limpa e moderna para sans-serif */
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --azul-unespar: #2C50A4;
+    --verde-fundo: #59B76A;
+    --verde-destaque: #8CC640;
+    --branco: #ffffff;
+    --sombra: rgba(0, 0, 0, 0.15);
 }
 
-/* Estilos Globais */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: var(--font-family);
-  background: linear-gradient(135deg, var(--cor-principal-verde), #4CAF50);
-  color: var(--cor-texto-principal);
-  line-height: 1.6;
-  font-size: 1.05rem;
-  padding-bottom: 50px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6; /* Fundo leve para não cansar a vista */
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Cabeçalho */
+/* Cabeçalho com o Azul Institucional */
 header {
-  background-color: var(--cor-principal-azul);
-  padding: 30px 20px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-color: var(--azul-unespar);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px var(--sombra);
 }
 
 header h1 img {
-  max-width: 250px;
-  height: auto;
+    max-width: 280px;
+    height: auto;
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.2));
 }
 
-/* Main - Layout Central */
+/* Container Principal */
 main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
+    max-width: 850px;
+    margin: 30px auto;
+    background: var(--branco);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-/* Títulos */
+/* Títulos Estilizados */
 h2 {
-  color: var(--cor-principal-azul);
-  border-bottom: 3px solid var(--cor-destaque-verde-claro);
-  padding-bottom: 15px;
-  margin-top: 35px;
-  margin-bottom: 25px;
-  text-transform: uppercase;
-  font-size: 2.1rem;
-  font-weight: 700;
+    color: var(--azul-unespar);
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--verde-fundo);
+    padding-left: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 h3 {
-  color: var(--cor-destaque-verde-claro);
-  margin-top: 25px;
-  margin-bottom: 15px;
-  font-size: 1.5rem;
-  font-weight: 600;
+    color: var(--verde-fundo);
+    margin: 20px 0 10px 0;
 }
 
-/* Parágrafos e Citações */
-p {
-  margin-bottom: 20px;
-  text-align: justify;
-}
-
+/* Citação em Destaque */
 blockquote {
-  border-left: 6px solid var(--cor-principal-azul);
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  margin: 30px 0;
-  font-style: italic;
-  font-size: 1.2rem;
-  border-radius: 0 8px 8px 0;
-  text-align: center;
+    background: #eef5ee;
+    border-right: 5px solid var(--verde-destaque);
+    border-left: 5px solid var(--verde-destaque);
+    padding: 25px;
+    margin: 30px 0;
+    font-style: italic;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #444;
+    border-radius: 8px;
 }
 
-/* Listas */
+/* Estilo das Listas */
 ul {
-  margin-left: 15px;
-  margin-bottom: 25px;
-  list-style-type: none; /* Remover os bullet points padrões */
+    list-style: none;
+    margin-bottom: 20px;
 }
 
 ul li {
-  margin-bottom: 12px;
-  position: relative;
-  padding-left: 30px;
+    padding: 10px 0 10px 35px;
+    position: relative;
+    border-bottom: 1px solid #eee;
 }
 
-/* Bullet Points Customizados (como um checkmark) */
+ul li:last-child {
+    border-bottom: none;
+}
+
+/* Ícone de check customizado nos itens da lista */
 ul li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: var(--cor-destaque-verde-claro);
-  font-weight: bold;
-  font-size: 1.1rem;
+    content: "➔";
+    position: absolute;
+    left: 0;
+    color: var(--verde-destaque);
+    font-weight: bold;
 }
 
-/* Texto Negrito */
-ul li strong,
-p strong {
-  color: var(--cor-destaque-verde-claro);
-  font-weight: 700;
-}
+/* --- DESTAQUES DO SISU (CONFORME A IMAGEM ENVIADA) --- */
 
-/* === Classes especiais para o SISU === */
-
-/* Adicionar um ID ao bloco de Pesos no HTML: <div id="pesos-sisu"> ... </div> */
 #pesos-sisu {
-  background-color: var(--cor-destaque-azul-medio);
-  padding: 15px;
-  border-radius: 6px;
-  color: var(--cor-texto-principal);
-  margin-bottom: 20px;
+    background-color: var(--azul-unespar);
+    color: var(--branco);
+    padding: 25px;
+    border-radius: 10px;
+    margin: 25px 0;
 }
 
 #pesos-sisu h3 {
-  color: var(--cor-texto-principal);
-  border-bottom: 2px solid var(--cor-texto-principal);
-  padding-bottom: 10px;
-  margin-top: 0;
+    color: var(--verde-destaque);
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 1.1rem;
 }
 
-/* Adicionar um ID ao bloco de Notas no HTML: <div id="notas-corte"> ... </div> */
+#pesos-sisu ul li {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#pesos-sisu ul li::before {
+    color: var(--branco);
+}
+
 #notas-corte {
-  border: 2px solid var(--cor-destaque-verde-claro);
-  padding: 15px;
-  border-radius: 6px;
-  background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--verde-fundo);
+    color: var(--branco);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 8px solid var(--azul-unespar);
 }
 
 #notas-corte h3 {
-  color: var(--cor-destaque-verde-claro);
-  margin-top: 0;
+    color: var(--branco);
+    margin-top: 0;
+    font-weight: bold;
+}
+
+#notas-corte ul li::before {
+    color: var(--azul-unespar);
+}
+
+/* Responsividade para Celular */
+@media (max-width: 600px) {
+    main {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    header h1 img {
+        max-width: 200px;
+    }
 }
